@@ -17,14 +17,14 @@ router.get("/prettypatties", function(req, res) {
    
 });
 
-router.put("/prettypatties/update/:id", function(req, res) {
+router.post("/prettypatties/update/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
   
     burg.updateOne({
       "devoured": req.body.devoured
-    }, condition, function(result) {
+    }, condition, function(data) {
       res.redirect("/prettypatties")
     });
   });
@@ -34,7 +34,7 @@ router.post("/prettypatties/create", function(req, res) {
       "burger_name"
     ], [
       req.body.burger_name, 
-    ], function(result) {
+    ], function(data) {
       // Send back the ID of the new quote
       res.redirect("/prettypatties");
     });

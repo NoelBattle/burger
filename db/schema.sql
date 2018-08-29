@@ -4,7 +4,7 @@ CREATE TABLE burgers
  (
 id int AUTO_INCREMENT,
 burger_name varchar(30) NOT NULL,
-devoured BOOLEAN, 
+devoured BOOLEAN NOT NULL, 
 PRIMARY KEY(id)
 );
 

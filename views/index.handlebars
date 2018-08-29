@@ -1,6 +1,7 @@
+
 <div class="container">
 	<div class="jumbotron">
-		<img src="../assets/images/burgers.png" width="auto" height="auto">
+		<img src="https://vignette.wikia.nocookie.net/spongebob/images/0/0f/Prettypattiesstore.png/revision/latest?cb=20150624201258" width="auto" height="auto">
 		<h1>Pretty Patties</h1>
 	</div>
 	
@@ -9,7 +10,7 @@
 
 	<div class="col-md-4 col-md-offset-1">
 	 <div class="panel-panel default">
-	 	<h1>Ready to Eat Burger</h1>
+	 	<h1>Not Eaten</h1>
 	 	<ul class="list-group">
 	 		{{#each burgers}}
 	 		 {{#unless this.devoured}}
@@ -18,7 +19,7 @@
 	 		  	<p class="lead">{{this.burger_name}}</p>
 	 		  	<span class="input-group-btn">
 
-	 		  		<form action="prettypatties/update/{{this.id}}?_method=PUT" method="POST">
+	 		  		<form action="prettypatties/update/{{this.id}}?_method=POST" method="POST">
 	 		  			<input type="hidden" name="devoured" value="true">
 	 		  			<button class="btn btn-default btn-lg" type="submit">Devour it!</button>
 	 		  		</form>
